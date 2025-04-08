@@ -1,6 +1,5 @@
 def int_check(question, name):
-    """Checks if user(s) enter an integer / float that is more than zero
-       (or optional exit code)"""
+    """Asks the user(s) for their name and their age, and checks if their age is between 12 and 120"""
     
     error = "Oops - please enter an integer"
     
