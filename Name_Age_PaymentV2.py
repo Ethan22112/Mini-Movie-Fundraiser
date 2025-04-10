@@ -1,27 +1,37 @@
 #Functions Go Above Main Routine
+
+#this function checks if the age that the user(s) entered is an integer, displays an error message if it isn't 
 def int_check(question):
+
+    #continuously executes the chunk of code that is below the while loop unless a value has been returned, or a 'break' code was executed
 
     while True:
          try:
 
+           #asks the user(s) for their age
            age = int(input(question))
            return age
 
          except ValueError:
+            #displays error message if variable (age) is empty
             print("Please enter an integer")
 
-
+#This function checks if the user(s) have not entered a blank name
 def not_blank(question):
 
+    # continuously executes the code below the while loop unless a value has been returned, or if a 'break' code was executed
     while True:
 
         name = input(question)
+        #checks if variable 'name' is not empty, returns the value that is in variable 'name' if so.
         if name != "":
             return name
         else:
+            #displays error message if variable 'name' is empty
             print("Sorry, this can't be blank, please try again")
+            print()
 
-
+#this function lets the user(s) choose between 'cash' or 'credit', or the first few numbers of each option according to variable 'num_letters' 
 def string_check(question, payment_ans = ('cash', 'credit'), num_letters = 1):
 
     # the role of this variable is to check if the while loop below has returned any values
