@@ -18,6 +18,10 @@ def int_check(question, name):
 #main routine goes here
 
 #loop for testing purposes
+
+MINIMUM_AGE = 12
+MAXIMUM_AGE = 120
+
 while True:
     print()
 
@@ -28,10 +32,10 @@ while True:
     #Asks the user for their age, checking if it is between 12 and 120
     age = int_check('Age: ', name)
     
-    if age < 12:
+    if age < MINIMUM_AGE:
         print(f'{name} is too young')
         continue
-    elif age > 120:
+    elif age > MAXIMUM_AGE:
         print(f'{name} is too old')
         continue
     else:
