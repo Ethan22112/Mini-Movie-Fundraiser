@@ -13,28 +13,42 @@ def int_check(question):
 
 def not_blank(question):
 
-    name = input(question).lower()
-
     while True:
+
+        name = input(question)
         if name != "":
             return name
         else:
-            print("Please enter a name")
+            print("Sorry, this can't be blank, please try again")
 
 
 def string_check(question, payment_ans = ('cash', 'credit'), num_letters = 1):
 
+    # the role of this variable is to check if the while loop below has returned any values
     Return = False
-    
+
+    #the while loop executes the code within it continuously until a value has been returned, or a 'break' code has been executed
     while True:
+         #asks the user(s) for their name
          response = input(question).lower()
+         #goes over each value in array 'payment_ans' checks if variable 'response' matches with any of them
          if response in payment_ans:
+            #returns the value that is in variable 'response' 
             return response
          else:
+            #checks if only the first two, or the value that is in variable 'num_letters' matches with the first two, or the value that is in 'num_letters' of the current value in 'payment_ans' 
             for item in payment_ans:
                 if response == item[:num_letters]:
+
+                    '''sets variable 'return' to True as the value in variable 'response' matches with one of the values in 'payment_ans' this 
+                    prevents the program from displaying an error message'''
+
                     Return = True
-                    return response
+                    if response == 'ca':
+                        return 'cash'
+                    elif response == 'cr':
+                        return "credit"
+            #executes this 'if' statement if boolean 'Return' remains False
             if Return == False:
               print(f"Please choose an option from {payment_ans}")
 
