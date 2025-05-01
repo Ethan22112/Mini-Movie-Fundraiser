@@ -130,7 +130,7 @@ while Tickets_Sold < MAX_TICKETS:
 
     #Output Error Message / Success Message
     if age < 12:
-        print(f"{name} is too young")
+        print("Sorry, you are too young for this movie")
         continue
     elif age > 120:
         print(f"{name} is too old")
