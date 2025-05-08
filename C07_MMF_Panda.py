@@ -1,5 +1,5 @@
 """
-import pandas
+import pandas as pd
 
 #lists to store ticket details
 
@@ -15,7 +15,7 @@ mini_movie_dict = {
 
 #create data frame / table from dictionary
 
-mini_movie_frame = pandas.DataFrame(mini_movie_dict)
+mini_movie_frame = pd.DataFrame(mini_movie_dict)
 
 print(mini_movie_frame)
 """
