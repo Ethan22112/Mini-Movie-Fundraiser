@@ -1,4 +1,3 @@
-"""
 import pandas as pd
 
 #lists to store ticket details
@@ -18,4 +17,3 @@ mini_movie_dict = {
 mini_movie_frame = pd.DataFrame(mini_movie_dict)
 
 print(mini_movie_frame)
-"""
